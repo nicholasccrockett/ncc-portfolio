@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Roboto:ital@1&display=swap");
+
+$dark-header-background: #3a3a3a;
+$dark-background: #202021;
+$mid-background: #5b5b5b;
+$light-header-background: #def2f2;
+$pallete3: #f0def2;
+
+.App {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'DM', sans-serif;
+    background-color: $dark-background;
+    .App-Navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $dark-header-background;
+        border-top: black 1px solid;
+        width: 100%;
+        height: 70px;
+
+        h1 {
+            justify-self: flex-end;
+            width: 30%;
+            padding-left: 1em;
+            font-size: 3vw;
+        }
+
+        ul {
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            list-style-type: none;
+
+            li {
+                height: 100%;
+                width:100%;
+                button {
+                    font-size: 20px;
+                    height: 70px;
+                    width: 100%;
+                    background-color: $dark-header-background;
+                    border: none;
+                    color: white;
+                    text-align: center;
+                    transition: 0.3s;
+                    cursor: pointer;
+                }
+                button:hover {
+                    background-color: $dark-background;
+                    border-bottom: green solid 2px;
+                }
+            }
+        }
+        button {
+            height: 100%;
+            width: 70px;
+            background-color: $dark-header-background;
+            border-style: none;
+        }
+    }
+    .App-Body {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+
+        .Bio {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            font-size: 20px;
+            img {
+                width: 30%;
+                height: 30%;
+                border-radius: 50%;
+            }
+
+            p {
+                font-size: 1.7em;
+                width: 60%;
+                padding: 1em;
+                background-color: $mid-background;
+                border-radius: 15px;
+            }
+        }
+
+        .Skills {
+            display: flex;
+            flex-direction: column;
+            align-self: flex-end;
+            align-items: flex-end;
+
+            ul {
+                display: flex;
+            }
+        }
+    }
+
+    .App-Contacts {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
