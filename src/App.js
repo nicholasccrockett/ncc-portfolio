@@ -4,6 +4,7 @@ import Contact from './components/Contact.js';
 import Home from './components/Home.js';
 import Navigation from './components/Nav.js';
 import Experience from './components/Experience';
+import Footer from './components/Footer';
 
 class App extends React.Component{
   constructor(props){
@@ -14,13 +15,15 @@ class App extends React.Component{
     };
 
     this.dark={
-      color: "white"
-    };
+			color: "white",
+			backgroundColor: "#202020"
+		};
 
-    this.style={
-      color: "white",
-      backgroundColor: "#3a3a3a"
-    };
+		this.light={
+			color:"black",
+			backgroundColor: "white",
+			'&:hover': {backgroundColor:'#aaaaaa'}
+		};
 
     this.switchModeCallback = this.switchModeCallback.bind(this);
     this.updatePageCallback = this.updatePageCallback.bind(this);
@@ -29,7 +32,7 @@ class App extends React.Component{
   displayControl(){ 
     switch(this.state.openPage){
       case "Home":
-        return <Home darkmode={this.state.darkMode}/>
+        return <Home darkmode={this.state.darkMode} switchMode={this.switchModeCallback}/>
       case "ContactMe":
         return <Contact darkmode={this.state.darkMode}/>
       case "Experience":
@@ -51,9 +54,10 @@ class App extends React.Component{
 
   render() {
     return (
-      <div className="App">
+      <div className="App" style={this.state.darkMode?this.dark:this.light}>
         <Navigation page={this.state.openPage} updatePage={this.updatePageCallback} darkmode={this.state.darkMode} switchMode={this.switchModeCallback}/>
         {this.displayControl()}
+        <Footer page={this.state.openPage}updatePage={this.updatePageCallback} darkmode={this.state.darkMode}/>
       </div>
     );
   }

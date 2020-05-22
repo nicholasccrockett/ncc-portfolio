@@ -12,26 +12,27 @@ $pallete3: #f0def2;
     color: white;
     font-family: 'DM', sans-serif;
     background-color: $dark-background;
+    min-height: 100vh;
+    align-items: center;
     .App-Navigation {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         background-color: $dark-header-background;
-        border-top: black 1px solid;
         width: 100%;
-        height: 70px;
+        height: 40px;
+        transition: 0.3s;
 
         h1 {
-            justify-self: flex-end;
-            width: 30%;
+            width: 33%;
             padding-left: 1em;
-            font-size: 3vw;
+            flex-grow:1;
         }
 
         ul {
             display: flex;
-            width: 50%;
-            justify-content: space-between;
+            height: 100%;
+            width:33%;
             list-style-type: none;
 
             li {
@@ -39,8 +40,8 @@ $pallete3: #f0def2;
                 width:100%;
                 button {
                     font-size: 20px;
-                    height: 70px;
-                    width: 100%;
+                    height: 100%;
+                    width: 10em;
                     background-color: $dark-header-background;
                     border: none;
                     color: white;
@@ -50,37 +51,69 @@ $pallete3: #f0def2;
                 }
                 button:hover {
                     background-color: $dark-background;
-                    border-bottom: green solid 2px;
+                    border-bottom: green solid 4px;
                 }
             }
+        }
+
+        .buttonSelection{
+            width:33%;
+            display:flex;
+            justify-content: flex-end;
+            height:100%;
         }
         button {
             height: 100%;
             width: 70px;
             background-color: $dark-header-background;
             border-style: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        button:hover {
+            border-bottom: green solid 4px;
+        }
+        a {
+            display: flex;
+            width: 70px;
+            height:100%;
+            align-items: center;
+            justify-content: center;
+
+            :hover {               
+                border-bottom: green solid 4px;
+             }
+
+            img {
+                height: '50%';
+                transition:.3s;
+            }
         }
     }
     .App-Body {
         padding: 1em;
         display: flex;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
+        min-height: 92vh;
 
         .Bio {
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: space-evenly;
-            font-size: 20px;
+            justify-content: center;
+            width:60%;
+            padding-bottom: 1em;
             img {
+                padding-right:1em;
                 width: 30%;
-                height: 30%;
                 border-radius: 50%;
             }
 
             p {
-                font-size: 1.7em;
-                width: 60%;
+                font-size: 1em;
+                width: 50%;
                 padding: 1em;
                 background-color: $mid-background;
                 border-radius: 15px;
@@ -88,21 +121,275 @@ $pallete3: #f0def2;
         }
 
         .Skills {
+            font-size: 2em;
             display: flex;
             flex-direction: column;
-            align-self: flex-end;
-            align-items: flex-end;
+            width: 60%;
+            min-height: 350px;
+            justify-self: center;
+            align-items: center;
+            align-self: center;
+
+            border-radius: 100px;
+
+            .tag-cloud{
+                min-height: 100px;
+                width: 55vw;;
+                text-align: center;
+                padding-bottom:1em;
+
+                .tag-cloud-tag{
+                    align-self:center;
+                    justify-self: center;
+                    cursor: default;
+                }
+            }
 
             ul {
                 display: flex;
+
+                li {
+                    list-style: none;
+                    font-size: 1em;
+                }
             }
         }
+        .Experience {
+            font-family: 'roboto', monospace;
+            margin-top: .5em;
+            font-size:2em;
+            padding-top: 0px;
+            display: flex;
+            flex-direction: column;
+            width:60%;
+            border-radius: 100px;
+
+            h2{ align-self: center; padding: 0px;}
+
+            ul{
+                width:90%;
+                li{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-items: center;
+                    list-style-type: none;
+                    .desc{display:none}
+                }
+            }
+        }
+    }
+
+    .App-Experience {
+        width:60%;
+        display:flex;
+        flex-direction: column;
+        .Experience{
+            display:flex;
+            flex-direction: column;
+            padding:1em;
+            padding-top: 0px;
+            padding-left: 3em;
+            margin-top: .5em;
+            border-radius: 15px;
+            width:100%;
+
+            h2{
+                align-self: center;
+            }
+
+            ul{
+                li{
+                    list-style-type: none;
+                    display: grid;
+                    width:100%;
+                    height: 100px;
+                    grid-template-columns: 70% auto;
+                    grid-template-rows: 20% 25% auto;
+    
+                    .Job-Title {
+                        font-size: 1em;
+                    }
+                    .Job-Location {
+                        font-size: .8em;
+                    }
+                    .time {
+                        font-size: .8em;
+                    }
+                    .desc {
+                        grid-column-start:1;
+                        grid-column-end:3;
+                        grid-row-start:3;
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+        .Skills{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-radius: 15px;
+            margin-top: .5em;
+            padding: 1em;
+            padding-top: 0px;
+            padding-left: 3em;
+
+            h2 {
+                align-self: center;
+            }
+
+            h3 {
+                padding-left: 2em;
+            }
+
+            ul{
+                li{
+                    list-style-type: none;
+                    display: grid;
+                    width:100%;
+                    height: 30px;
+                    grid-template-columns: 35% auto;
+                    grid-template-rows: auto;
+    
+                    .Job-Title {
+                        font-size: 18px;
+                    }
+                    .Job-Location {
+                        font-size: 16px;
+                    }
+                    .time {
+                        font-size: 16px;
+                    }
+                    .desc {
+                        grid-column-start:1;
+                        grid-column-end:end;
+                        grid-row-start:3;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        
     }
 
     .App-Contacts {
         display:flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
+        min-height: 95vh;
+
+        .SocialMedia {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 20vw;
+        }
+
+        img {
+            width: 64px;
+        }
+
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 50vw;
+            
+            .nameInput{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                width: 100%;
+                padding:.3em;
+            }
+            .emailInput{
+                width: 50vw;
+                padding: .3em;
+            }
+
+            .messageInput{
+                display: flex;
+                justify-content: flex-start;
+                font-family: 'DM', sans-serif;
+                padding:.3em;
+                width:50vw;
+                min-height: 20vh;
+                border-bottom-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+            }
+            
+            input {
+                font-size: 1em;
+                border-radius: 0px;
+                border-style: none;
+            }
+            input .submitButton {
+                border: solid grey 2px;
+            }
+        }
     }
+
+    .App-Experience {
+        padding-bottom: 2vh;
+    }
+
+    .App-Footer {
+        display: flex;
+        justify-content: center;
+        align-items:flex-start  ;
+        width: 100%;
+        min-height: 100px;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        background: black;
+        color: darkgrey;
+
+        .Footer-Content {
+            width: 60%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        ul {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: flex-start;
+            width:33%;
+            list-style: none;
+            color:darkgrey;
+            a{
+                font-style: normal;
+                cursor: pointer;
+            }
+        }
+
+        .socMed {
+            flex-direction: row;
+            img { width: 32px;}
+        }
+
+    }
+
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
