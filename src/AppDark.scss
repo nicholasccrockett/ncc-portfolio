@@ -393,3 +393,29 @@ $pallete3: #f0def2;
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+      font-size: 12px;
+    visibility: hidden;
+    background-color: #eee;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    width: 80px;
+    top: 100%;
+    left: 50%;
+    margin-left: -45px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }

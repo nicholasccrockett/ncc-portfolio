@@ -39,8 +39,8 @@ class Navigation extends React.Component {
 				</ul>
 				<br/>
 				<div className="buttonSelection">
-					<button style={this.props.darkmode?this.darkmodeButton:this.lightmodeButton} onClick={this.props.switchMode}>{this.props.darkmode?<img src={invertdark} alt="Invert Colors"/>:<img src={invertlight } alt="Invert Colors"/>}</button>
-					<a href="https://github.com/nicholasccrockett/ncc-portfolio" target="_blank" label="GitHub Repository"><img src={this.props.darkmode?GitHubLight:GitHubDark} style={{height: '60%'}} alt="This git-hub page"></img></a>
+					<button style={this.props.darkmode?this.darkmodeButton:this.lightmodeButton} onClick={this.props.switchMode} className="tooltip"><span className="tooltiptext">Light/Dark mode</span>{this.props.darkmode?<img src={invertdark} alt="Invert Colors"/>:<img src={invertlight } alt="Invert Colors"/>}</button>
+					<a href="https://github.com/nicholasccrockett/ncc-portfolio" target="_blank" label="GitHub Repository"className="tooltip"><span className="tooltiptext">GitHub</span><img src={this.props.darkmode?GitHubLight:GitHubDark} style={{height: '60%'}} alt="This git-hub page"></img></a>
 				</div>
 			</div>
     );

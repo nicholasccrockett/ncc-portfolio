@@ -40,9 +40,9 @@ class Contact extends React.Component {
 				<h2>Phone: 573.286.7675</h2>
 				<br></br>
 				<div className="SocialMedia">
-					<a href="https://www.linkedin.com/in/nicholas-c-crockett/" target="_blank"><img src={ln} alt="LinkedIn Profile"></img></a>
-					<a href="https://github.com/nicholasccrockett" target="_blank"><img src={this.props.darkmode?GitHubLight:GitHubDark}></img></a>
-					<a href="https://www.facebook.com/nicholas.crockett.3/" target="_blank"><img src={Facebook}></img></a>
+					<a href="https://www.linkedin.com/in/nicholas-c-crockett/" target="_blank" className="tooltip"><span className="tooltiptext">LinkedIn Profile</span><img src={ln} alt="LinkedIn Profile"></img></a>
+					<a href="https://github.com/nicholasccrockett" target="_blank" className="tooltip"><span className="tooltiptext">GitHub Profile</span><img src={this.props.darkmode?GitHubLight:GitHubDark}></img></a>
+					<a href="https://www.facebook.com/nicholas.crockett.3/" target="_blank"className="tooltip"><span className="tooltiptext">Facebook Profile</span><img src={Facebook}></img></a>
 				</div>
 				<br></br>
 				<h1>or</h1>
