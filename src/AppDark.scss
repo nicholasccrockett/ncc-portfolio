@@ -24,15 +24,15 @@ $pallete3: #f0def2;
         transition: 0.3s;
 
         h1 {
-            width: 33%;
+            width: 15%;
             padding-left: 1em;
-            flex-grow:1;
         }
 
         ul {
             display: flex;
+            justify-items: center;
             height: 100%;
-            width:33%;
+            width:40%;
             list-style-type: none;
 
             li {
@@ -57,7 +57,7 @@ $pallete3: #f0def2;
         }
 
         .buttonSelection{
-            width:33%;
+            width:10%;
             display:flex;
             justify-content: flex-end;
             height:100%;

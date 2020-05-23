@@ -29,7 +29,7 @@ class Experience extends React.Component {
           <h3>Professional</h3>
 					<ul>
 						{this.xpItem("Cyber-Security Intern", "Sho-Me Power", "May 2019 - January 2020", "Researched, tested and implemented cyber security software defenses.")}
-						{this.xpItem("Resident Assistant", "Southwest Baptist University", "August 2017 - May 2020", "Manage Interpersonal realationshipe, culture a positive and productive environment, and efficiently and effectively handle emergency situations for 50+ dorm residents")}
+						{this.xpItem("Resident Assistant", "Southwest Baptist University", "August 2017 - May 2020", "Manage Interpersonal relationship, culture a positive and productive environment, and efficiently and effectively handle emergency situations for 50+ dorm residents")}
 					</ul>
           <h3>Educational</h3>
           <ul>
