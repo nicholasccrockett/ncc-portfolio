@@ -1,3 +1,9 @@
+/*
+  File: Experience.js
+  Purpose: Body page displaying Work and educational experience as well as skills.
+  Desc: Contains 2 main bodies, the Experience div and the Skills div, to display lists of information
+*/
+
 import React from 'react';
 
 class Experience extends React.Component {

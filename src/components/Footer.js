@@ -1,3 +1,9 @@
+/*
+	File: Footer.js
+	Purpose: Act as bookend for page. Smoothly contains page info and quick links
+	Desc: Contains links to all 'pages' within application, and links to github repo and blog, as well as to personal social media
+*/
+
 import React from 'react';
 import ln from '../assets/LI-In-Bug.png';
 import GitHubLight from '../assets/GitHub-Mark-Light-64px.png';
@@ -35,6 +41,9 @@ class Footer extends React.Component {
 						<a href="https://github.com/nicholasccrockett" target="_blank"><img src={this.props.darkmode?GitHubLight:GitHubDark}></img></a>
 						<a href="https://www.facebook.com/nicholas.crockett.3/" target="_blank"><img src={Facebook}></img></a>
 					</ul>
+				</div>
+				<div className="Footer-Subtext">
+					<p>This web-page was made using React</p>
 				</div>
 			</div>
 		)

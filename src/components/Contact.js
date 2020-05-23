@@ -1,3 +1,10 @@
+/*
+	File: Contact.js
+	Purpose: Display contact information and Contact Form.
+	Desc: Displays email, phone number and social media links to my accounts.
+		Also contains Form allowing the user to send an email to me
+*/
+
 import React from 'react';
 import Form from './Form';
 import ln from '../assets/LI-In-Bug.png';

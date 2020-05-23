@@ -1,3 +1,10 @@
+/*
+	File: Form.js
+	Purpose: Fillable form that connects to emailjs. 
+	Desc: Allows filler to send email to nicholasccrockett@gmail.com. Requires all fields be filled,
+		and then sends info to emailjs to be emailed.
+*/
+
 import React from 'react';
 
 class Form extends React.Component {

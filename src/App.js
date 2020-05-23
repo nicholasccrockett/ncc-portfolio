@@ -1,3 +1,9 @@
+/*
+  File: App.js
+  Purpose: Main Component for web-app
+  Desc: This file is the parent component for all sub-components. It is the majority webpage.
+*/
+
 import React from 'react';
 import './AppDark.scss';
 import Contact from './components/Contact.js';

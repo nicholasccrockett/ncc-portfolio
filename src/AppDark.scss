@@ -1,3 +1,10 @@
+/*
+    File: AppDark.scss
+    Purpose: Style all the components
+    Desc: Styles each components in the form factor of where things go.
+    Note: Most colors are overriden by light/dark mode implementation
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Roboto:ital@1&display=swap");
 
 $dark-header-background: #3a3a3a;
@@ -338,6 +345,7 @@ $pallete3: #f0def2;
         display: flex;
         justify-content: center;
         align-items:flex-start  ;
+        flex-direction: column;
         width: 100%;
         min-height: 100px;
         padding-top: 1em;
@@ -349,6 +357,12 @@ $pallete3: #f0def2;
             width: 60%;
             display: flex;
             justify-content: space-evenly;
+            align-self: center;
+        }
+
+        .Footer-Subtext {
+            align-self: center;
+            color: #333;
         }
 
         ul {
@@ -359,6 +373,10 @@ $pallete3: #f0def2;
             width:33%;
             list-style: none;
             color:darkgrey;
+            li {
+                cursor: pointer;
+            }
+
             a{
                 font-style: normal;
                 cursor: pointer;
@@ -399,7 +417,7 @@ $pallete3: #f0def2;
   }
   
   .tooltip .tooltiptext {
-      font-size: 12px;
+    font-size: 12px;
     visibility: hidden;
     background-color: #eee;
     color: #000;
@@ -418,4 +436,25 @@ $pallete3: #f0def2;
   
   .tooltip:hover .tooltiptext {
     visibility: visible;
+  }
+
+  .tooltip .tooltiptextOff {
+    font-size: 12px;
+    visibility: hidden;
+    background-color: #eee;
+    color: #000;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    width: 50px;
+    top: 100%;
+    left: 50%;
+    margin-left: -30px;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+  }
+  .tooltip:hover .tooltiptextOff {
+      visibility: visible;
   }

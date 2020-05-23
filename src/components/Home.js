@@ -1,3 +1,9 @@
+/*
+	File: Home.js
+	Purpose: Display About Me page. Also acts as home/initial page.
+	Desc: Displays my picture, a short biography, a skills word cloud, and less descriptive experience information table.
+*/
+
 import React from 'react';
 import nick from '../assets/nick_crockett.jpg';
 import {TagCloud} from 'react-tagcloud';
