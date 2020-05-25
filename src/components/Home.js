@@ -42,6 +42,7 @@ class Home extends React.Component {
 			color: "lightgrey"
 		};
 
+		// array holds values and 'strenth' of values for word cloud.
 		this.skills = [
 			{	value: "Leadership", count: 40},
 			{ value: "Interpersonal Communication", count: 35},
@@ -69,10 +70,12 @@ class Home extends React.Component {
 			<div className="App-Body" style={this.props.darkmode?this.dark:this.light}>
           <div className="Bio">
 						<img src={nick} alt="Nicholas Crockett"></img>
+						{/* Style changes dynamically accoding to darkmode boolean. */}
 						<p style={this.props.darkmode?this.darkmodeBubble:this.lightmodeBubble}> Hi! I'm Nick Crockett <br/><br/>I am a recent Computer Science graduate from Southwest Baptist University. I studied Computer Science and Cyber Security, graduating with a Major in the former. I am passionate about problem solving and ensuring the security and well-being of those around me.<br/><br/> I am from Central Missourri, currently living in Marshfield. I pass the time by playing guitar, enjoying outdoors via hiking or running, or delving into a movie.<br/><br/>For those interested in personality tests, I am an ENFP on the Myers-Briggs test and I identify as a 7 on the Enneagram.<br/><br/>I am also a big believer that <b onClick={this.props.switchMode}>darkmode</b> is a functional requirement for any project.<br/><br/>For more information about my skills and past experiences check out the relevant page.</p>
 					</div>
 					<div className="Skills" style={this.props.darkmode?this.darkmodeBubbleSkills:this.lightmodeBubbleSkills}>
 						<h2>Skills</h2>
+						{/* Tag cloud component creates a word cloud defined by this.skills array. comes from react-tag-cloud library*/}
 						<TagCloud
 							minSize={20}
 							maxSize={60}
@@ -93,6 +96,7 @@ class Home extends React.Component {
 		)
 	}
 
+	// Skill item returns skills as formatted to be desired.
 	skillItem(str1, str2){
     return(
       <li>
@@ -102,6 +106,7 @@ class Home extends React.Component {
     )
   }
 
+	//xpItem returns experience list item to be displayed in an unordered list.
   xpItem(title, loc, timeframe, desc){
     return(
       <li className="ExperienceItem">
